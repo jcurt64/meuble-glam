@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* background-color: #f8fafc; */
+  /* #f8fafc */
+}
+@layer components {
+  .itemMenu {
+    @apply font-light dark:text-white text-slate-900 dark:hover:text-gray-300 hover:text-gray-600 hover:cursor-pointer hover:underline hover:decoration-[#892832]/80  hover:decoration-4 hover:underline-offset-4 active:underline hover:scale-110 transition-transform duration-200 ease-out;
+  }
 }
