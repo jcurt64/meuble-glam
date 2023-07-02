@@ -36,7 +36,7 @@ const Appart = () => {
           como3="Italienne"
           como4="Wifi"
           subtitle=" Un grand loft doté d'une cuisine américaine et d'une douche italienne. Le décor vous rappelera sûrement la capitale de la France..."
-          price="35 000"
+          price="30 000"
         />
 
         <AppartDetail

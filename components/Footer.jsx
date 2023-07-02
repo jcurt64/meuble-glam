@@ -5,7 +5,7 @@ const today = new Date();
 
 function Footer() {
   return (
-    <div className=" h-[280px] md:h-[120px] bg-zink-100 flex flex-col md:flex-row gap-y-5 items-center justify-evenly">
+    <div className=" h-[280px] mt-8 md:h-[120px] bg-zink-100 flex flex-col md:flex-row gap-y-5 items-center justify-evenly">
       <div>
         <Image
           className="cursor-pointer"

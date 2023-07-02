@@ -7,7 +7,7 @@ import {
   MapPinIcon,
   PhoneIcon,
   PhotoIcon,
-  ArrowsPointingOutIcon,
+  ArrowDownLeftIcon,
   BanknotesIcon,
   BoltIcon,
   XCircleIcon,
@@ -16,6 +16,13 @@ import { FaBath, FaWifi } from "react-icons/fa";
 import { MdKitchen, MdCleaningServices, MdDryCleaning } from "react-icons/md";
 import ModalLoftParis from "./ModalLoftParis";
 import Image from "next/image";
+import Carousel from "./Carousel";
+
+const sliders = [
+     "/1.jpg",
+   "/2.jpg",
+   "/3.jpg",
+]
 
 const AppartDetail = ({
   title1,
@@ -28,6 +35,9 @@ const AppartDetail = ({
   price,
   img,
 }) => {
+const openSlider =  {
+
+}
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
@@ -54,20 +64,22 @@ const AppartDetail = ({
         {/* LEFT */}
 
         {/* image */}
-        <div className="flex flex-col items-center justify-center gap-6 hover:scale-110 transition-transform duration-200 ease-out ">
-          <Image
-            className="rounded-md"
-            src={img}
-            alt="encours"
-            width="380"
-            height="340"
-          />
-        </div>
-        <div className="absolute flex gap-3 bottom-3 text-center bg-white/90 cursor-pointer text-white px-8 py-4 rounded-md ">
-          <p className="text-gray-800 font-bold">Voir +</p>
+       
+        <div>
+        <Carousel autoSlide={true}>
+          {sliders.map((slide) => (
+            <Image key={slide} src={slide} alt="" width={300} height={300}
+            
+            className="rounded filter saturate-150"/>
+          ))}
+        </Carousel>
+      </div>
+        {/* <div className="absolute flex gap-3 bottom-3 text-center bg-white/90 cursor-pointer text-white px-8 py-4 rounded-md ">
+          <button onClick={openSlider}
+          className="text-gray-800 font-bold">Voir +</button>
           <PhotoIcon className="w-6 h-6 font-light text-gray-800" />
-        </div>
-        {/* <HeartIcon className="w-10 h-10 absolute top-16 right-16 text-white bg-white/50 rounded-full p-2 cursor-pointer hover:text-red-600" /> */}
+        </div> */}
+
       </div>
 
       {/* RIGHT */}
@@ -171,7 +183,7 @@ const AppartDetail = ({
       <div>
         <div className="flex items-center justify-center -mt-2 gap-2">
           <BanknotesIcon className="w-6 h-6 font-light text-green-600" />
-          <p className="text-xl font-bold tracking-wide text-slate-700">
+          <p className="text-lg font-bold tracking-wide text-slate-700">
             A partir de FCFA {price} <span className="text-sm">/ nuit</span>
           </p>
         </div>
@@ -188,8 +200,10 @@ const AppartDetail = ({
               </p>
             </a>
           </div>
+          
         </div>
       </div>
+     
     </div>
   );
 }

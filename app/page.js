@@ -12,8 +12,8 @@ export default function Home() {
     <div className="max-w-7xl mx-auto">
          <Header />
       <HeroSection />
-      {/* <Appart /> */}
-      {/* <Bonus/> */}
+      <Appart />
+      <Bonus/>
       <ConfianceDetail />
       <Contact/>
       <Footer />

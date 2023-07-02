@@ -1,6 +1,5 @@
 "use client"
 
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import DarkButton from "./DarkButton";

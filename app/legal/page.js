@@ -1,17 +1,29 @@
 
+import Image from "next/image";
 import ItemLegal from "../../components/ItemLegal";
+import Link from "next/link";
 
 function Legal() {
   return (
-    <div className="bg-[#f8fafc] transition-all duration-700 dark:bg-slate-800">
+    <div>
+     <Link href="/" className="flex items-center justify-center mt-20">
+          <Image
+            className=""
+            src="/glam_logo.png"
+            alt="encours"
+            width="210"
+            height="140"
+          />
+        </Link>
+    <div className="">
 
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center space-y-4 mb-10">
-          <p className="text-4xl font-InterFont dark:text-gray-300 text-slate-700 tracking-wide text-center mt-52 max-w-[700px]">
+          <p className="text-4xl font-InterFont dark:text-gray-300 text-slate-700 tracking-wide text-center mt-16 max-w-[700px]">
             {`Conditions générales d'utilisation du site www.kabral-renovation.fr`}
           </p>
           <span className="font-light pt-12 dark:text-gray-300 text-slate-700 underline underline-offset-4">
-            Version - Mai 2023
+            Version - Juillet 2023
           </span>
         </div>
         <div className="p-8">
@@ -122,6 +134,16 @@ function Legal() {
           />
         </div>
       </div>
+      <Link href="/" className="flex items-center justify-center mt-20 pb-14">
+          <Image
+            className=""
+            src="/glam_logo.png"
+            alt="encours"
+            width="210"
+            height="140"
+          />
+        </Link>
+    </div>
     </div>
   );
 }

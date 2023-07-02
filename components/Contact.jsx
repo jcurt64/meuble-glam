@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 function Contact() {
   return (
     <div
-      className="pt-44 mt-24 pb-36 flex flex-col items-center justify-center w-full bg-zinc-100 h-[800px]"
+      className="pt-44 mt-24 pb-24 flex flex-col items-center justify-center w-full bg-zinc-100 h-[1000px]"
       id="contact"
     >
       <div className="flex flex-col -mt-44 gap-3">
@@ -44,6 +44,13 @@ function Contact() {
           height={140}
           url="https://www.facebook.com/100063537908623/videos/756015202848323"
         /> */}
+        <video
+        src="https://www.youtube.com/watch?v=TWfW_c3jG9A&t=4239s"
+        controls
+        className="w-[300px] h-[300px]"
+        >
+
+        </video>
       </div>
     </div>
   );
